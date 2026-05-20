@@ -11,6 +11,7 @@ import { InfoCard } from './components/cards/InfoCard';
 import { ProductFeatureCard } from './components/cards/ProductFeatureCard';
 import { ComparisonTable } from './components/sections/ComparisonTable';
 import { DofaSection } from './components/sections/DofaSection';
+import { EconomicEnvironmentSection } from './components/sections/EconomicEnvironmentSection';
 import { Timeline } from './components/sections/Timeline';
 import { SustainabilityCard } from './components/cards/SustainabilityCard';
 import { MetricCard } from './components/cards/MetricCard';
@@ -21,6 +22,7 @@ import { documents } from './data/documents';
 import { indicators } from './data/indicators';
 import { marketOpportunities, marketSummary } from './data/market';
 import { dofaQuadrants } from './data/dofa';
+import { economicCharts, economicEnvironmentTitle } from './data/economicEnvironment';
 import { potentialClients, viabilityChannels, viabilityNarrative, viabilityOverview, viabilityReadiness } from './data/internationalViability';
 import { productFeatures, productProfile } from './data/product';
 import { projectOverview, quickActions } from './data/project';
@@ -37,6 +39,7 @@ const sections = [
   { id: 'dofa', label: 'DOFA' },
   { id: 'estados', label: 'Estados' },
   { id: 'viabilidad', label: 'Viabilidad' },
+  { id: 'entorno-economico', label: 'Entorno Económico' },
   { id: 'estrategia', label: 'Estrategia' },
   { id: 'sostenibilidad', label: 'Sostenibilidad' },
   { id: 'indicadores', label: 'Indicadores' },
@@ -266,6 +269,15 @@ function App() {
                 ))}
               </div>
             </article>
+          </motion.section>
+
+          <motion.section id="entorno-economico" initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <SectionHeader
+              eyebrow="Análisis"
+              title={economicEnvironmentTitle}
+              description="Datos para gráficas de línea comparativas entre Iowa y Nebraska sobre PIB, ingreso, inflación, desempleo e impuestos."
+            />
+            <EconomicEnvironmentSection charts={economicCharts} />
           </motion.section>
 
           <motion.section id="estrategia" initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
