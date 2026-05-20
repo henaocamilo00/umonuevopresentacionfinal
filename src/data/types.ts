@@ -62,3 +62,17 @@ export interface ProjectUpdate {
   category: string;
   author?: string;
 }
+
+export type DofaType = 'Fortalezas' | 'Oportunidades' | 'Debilidades' | 'Amenazas';
+
+export interface DofaItem {
+  title: string;
+  description: string;
+  impact: 'Alto' | 'Medio' | 'Bajo';
+}
+
+export interface DofaQuadrant {
+  type: DofaType;
+  summary: string;
+  items: DofaItem[];
+}

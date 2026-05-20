@@ -10,6 +10,7 @@ import { SectionHeader } from './components/ui/SectionHeader';
 import { InfoCard } from './components/cards/InfoCard';
 import { ProductFeatureCard } from './components/cards/ProductFeatureCard';
 import { ComparisonTable } from './components/sections/ComparisonTable';
+import { DofaSection } from './components/sections/DofaSection';
 import { Timeline } from './components/sections/Timeline';
 import { SustainabilityCard } from './components/cards/SustainabilityCard';
 import { MetricCard } from './components/cards/MetricCard';
@@ -19,6 +20,7 @@ import { companyCapabilities, companySummary, companyTimeline } from './data/com
 import { documents } from './data/documents';
 import { indicators } from './data/indicators';
 import { marketOpportunities, marketSummary } from './data/market';
+import { dofaQuadrants } from './data/dofa';
 import { productFeatures, productProfile } from './data/product';
 import { projectOverview, quickActions } from './data/project';
 import { sustainabilityItems } from './data/sustainability';
@@ -31,6 +33,7 @@ const sections = [
   { id: 'empresa', label: 'Empresa' },
   { id: 'producto', label: 'Producto' },
   { id: 'mercado', label: 'Mercado' },
+  { id: 'dofa', label: 'DOFA' },
   { id: 'estados', label: 'Estados' },
   { id: 'estrategia', label: 'Estrategia' },
   { id: 'sostenibilidad', label: 'Sostenibilidad' },
@@ -164,6 +167,15 @@ function App() {
                 <InfoCard key={opportunity.title} title={opportunity.title} description={opportunity.description} meta={opportunity.segment} icon={<Globe size={18} />} />
               ))}
             </div>
+          </motion.section>
+
+          <motion.section id="dofa" initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <SectionHeader
+              eyebrow="Estrategia"
+              title="Análisis DOFA del Proyecto"
+              description="Matriz dinámica editable desde data/dofa.ts para fortalecer la toma de decisiones en la entrada al mercado estadounidense."
+            />
+            <DofaSection quadrants={dofaQuadrants} />
           </motion.section>
 
           <motion.section id="estados" initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
