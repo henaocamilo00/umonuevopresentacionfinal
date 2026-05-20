@@ -12,6 +12,7 @@ import { ProductFeatureCard } from './components/cards/ProductFeatureCard';
 import { ComparisonTable } from './components/sections/ComparisonTable';
 import { DofaSection } from './components/sections/DofaSection';
 import { EconomicEnvironmentSection } from './components/sections/EconomicEnvironmentSection';
+import { ComparativeEnvironmentsSection } from './components/sections/ComparativeEnvironmentsSection';
 import { Timeline } from './components/sections/Timeline';
 import { SustainabilityCard } from './components/cards/SustainabilityCard';
 import { MetricCard } from './components/cards/MetricCard';
@@ -22,6 +23,7 @@ import { documents } from './data/documents';
 import { indicators } from './data/indicators';
 import { marketOpportunities, marketSummary } from './data/market';
 import { dofaQuadrants } from './data/dofa';
+import { comparativeEnvironmentBlocks } from './data/comparativeEnvironments';
 import { economicCharts, economicEnvironmentTitle } from './data/economicEnvironment';
 import { potentialClients, viabilityChannels, viabilityNarrative, viabilityOverview, viabilityReadiness } from './data/internationalViability';
 import { productFeatures, productProfile } from './data/product';
@@ -40,6 +42,7 @@ const sections = [
   { id: 'estados', label: 'Estados' },
   { id: 'viabilidad', label: 'Viabilidad' },
   { id: 'entorno-economico', label: 'Entorno Económico' },
+  { id: 'entornos-comparativos', label: 'Entornos 2-6' },
   { id: 'estrategia', label: 'Estrategia' },
   { id: 'sostenibilidad', label: 'Sostenibilidad' },
   { id: 'indicadores', label: 'Indicadores' },
@@ -278,6 +281,15 @@ function App() {
               description="Datos para gráficas de línea comparativas entre Iowa y Nebraska sobre PIB, ingreso, inflación, desempleo e impuestos."
             />
             <EconomicEnvironmentSection charts={economicCharts} />
+          </motion.section>
+
+          <motion.section id="entornos-comparativos" initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <SectionHeader
+              eyebrow="Entornos"
+              title="Análisis comparativo complementario"
+              description="Bloques con tabla, gráfico y justificación corta para los entornos social/cultural, tecnológico/geográfico, político/legal, comercio internacional e inversión extranjera."
+            />
+            <ComparativeEnvironmentsSection blocks={comparativeEnvironmentBlocks} />
           </motion.section>
 
           <motion.section id="estrategia" initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
