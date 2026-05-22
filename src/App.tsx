@@ -11,6 +11,7 @@ import { DocumentsPage } from './pages/DocumentsPage';
 import { EconomicPage } from './pages/EconomicPage';
 import { HomePage } from './pages/HomePage';
 import { MarketStatesPage } from './pages/MarketStatesPage';
+import { ReferencesPage } from './pages/ReferencesPage';
 import { StrategyPage } from './pages/StrategyPage';
 import { SustainabilityIndicatorsPage } from './pages/SustainabilityIndicatorsPage';
 import { ViabilityPage } from './pages/ViabilityPage';
@@ -60,6 +61,11 @@ const navItems = [
     to: '/documentos',
     label: 'Documentos',
     hint: 'Biblioteca y actualizaciones del proyecto.'
+  },
+  {
+    to: '/referencias',
+    label: 'Referencias',
+    hint: 'Fuentes consultadas y enlaces de soporte del análisis.'
   }
 ];
 
@@ -118,6 +124,7 @@ function App() {
                 <Route path="/entornos-comparativos" element={<ComparativeEnvironmentsPage />} />
                 <Route path="/estrategia" element={<StrategyPage />} />
                 <Route path="/documentos" element={<DocumentsPage />} />
+                <Route path="/referencias" element={<ReferencesPage />} />
 
                 <Route path="/empresa" element={<Navigate to="/empresa-producto" replace />} />
                 <Route path="/producto" element={<Navigate to="/empresa-producto" replace />} />

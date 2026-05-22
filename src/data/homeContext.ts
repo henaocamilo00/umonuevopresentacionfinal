@@ -65,5 +65,10 @@ export const homeModules = [
     title: 'Documentos y avances',
     description: 'Biblioteca, recursos y actualizaciones del proyecto.',
     route: '/documentos'
+  },
+  {
+    title: 'Referencias',
+    description: 'Fuentes utilizadas para respaldar datos e interpretación.',
+    route: '/referencias'
   }
 ];
