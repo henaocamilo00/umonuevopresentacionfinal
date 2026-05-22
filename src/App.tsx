@@ -10,9 +10,9 @@ import { ComparativeEnvironmentsPage } from './pages/ComparativeEnvironmentsPage
 import { DocumentsPage } from './pages/DocumentsPage';
 import { EconomicPage } from './pages/EconomicPage';
 import { HomePage } from './pages/HomePage';
-import { IndicatorsPage } from './pages/IndicatorsPage';
 import { MarketStatesPage } from './pages/MarketStatesPage';
 import { StrategyPage } from './pages/StrategyPage';
+import { SustainabilityIndicatorsPage } from './pages/SustainabilityIndicatorsPage';
 import { ViabilityPage } from './pages/ViabilityPage';
 
 const navItems = [
@@ -37,6 +37,11 @@ const navItems = [
     hint: 'Lectura estratégica de entrada internacional.'
   },
   {
+    to: '/sostenibilidad',
+    label: 'Sostenibilidad',
+    hint: 'Indicadores económicos, sociales y ambientales + objetivo SMART.'
+  },
+  {
     to: '/entorno-economico',
     label: 'Entorno Económico',
     hint: 'Series históricas y tendencias clave del mercado.'
@@ -50,11 +55,6 @@ const navItems = [
     to: '/estrategia',
     label: 'Estrategia',
     hint: 'Ruta de ejecución, sostenibilidad y cierre estratégico.'
-  },
-  {
-    to: '/indicadores',
-    label: 'Indicadores',
-    hint: 'KPIs con filtros y vista analítica.'
   },
   {
     to: '/documentos',
@@ -113,16 +113,17 @@ function App() {
                 <Route path="/empresa-producto" element={<CompanyProductPage />} />
                 <Route path="/mercado-estados" element={<MarketStatesPage />} />
                 <Route path="/viabilidad" element={<ViabilityPage />} />
+                <Route path="/sostenibilidad" element={<SustainabilityIndicatorsPage />} />
                 <Route path="/entorno-economico" element={<EconomicPage />} />
                 <Route path="/entornos-comparativos" element={<ComparativeEnvironmentsPage />} />
                 <Route path="/estrategia" element={<StrategyPage />} />
-                <Route path="/indicadores" element={<IndicatorsPage />} />
                 <Route path="/documentos" element={<DocumentsPage />} />
 
                 <Route path="/empresa" element={<Navigate to="/empresa-producto" replace />} />
                 <Route path="/producto" element={<Navigate to="/empresa-producto" replace />} />
                 <Route path="/mercado" element={<Navigate to="/mercado-estados" replace />} />
                 <Route path="/estados" element={<Navigate to="/mercado-estados" replace />} />
+                <Route path="/indicadores" element={<Navigate to="/sostenibilidad" replace />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </motion.div>

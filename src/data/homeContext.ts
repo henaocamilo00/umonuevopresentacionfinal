@@ -47,6 +47,11 @@ export const homeModules = [
     route: '/viabilidad'
   },
   {
+    title: 'Sostenibilidad',
+    description: 'Indicadores económicos, sociales y ambientales + objetivo SMART.',
+    route: '/sostenibilidad'
+  },
+  {
     title: 'Entornos y Datos',
     description: 'Análisis económico y comparativo para soportar decisiones.',
     route: '/entorno-economico'
@@ -57,8 +62,8 @@ export const homeModules = [
     route: '/estrategia'
   },
   {
-    title: 'Control del proyecto',
-    description: 'Indicadores, documentos y actualizaciones del avance.',
-    route: '/indicadores'
+    title: 'Documentos y avances',
+    description: 'Biblioteca, recursos y actualizaciones del proyecto.',
+    route: '/documentos'
   }
 ];
