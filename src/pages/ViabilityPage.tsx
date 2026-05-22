@@ -82,6 +82,22 @@ export function ViabilityPage() {
           </div>
         </article>
       </section>
+
+      <section>
+        <article className="rounded-2xl border border-umoRed/35 bg-umoRed/10 p-5 shadow-glow">
+          <p className="text-xs uppercase tracking-[0.2em] text-red-100">Recurso recomendado</p>
+          <h3 className="mt-2 text-lg font-semibold text-fogWhite">Bussines Model Canvas / UMO</h3>
+          <p className="mt-2 text-sm text-zinc-200">Documento de referencia para estructurar el modelo de negocio del proyecto.</p>
+          <a
+            href="https://canva.link/1ewrjy91qyn8iqa"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-flex rounded-xl border border-red-300/40 bg-red-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-red-100 transition hover:bg-red-300/20"
+          >
+            Abrir enlace
+          </a>
+        </article>
+      </section>
     </div>
   );
 }
