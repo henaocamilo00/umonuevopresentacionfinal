@@ -12,6 +12,8 @@ import { EconomicPage } from './pages/EconomicPage';
 import { HomePage } from './pages/HomePage';
 import { MarketStatesPage } from './pages/MarketStatesPage';
 import { ReferencesPage } from './pages/ReferencesPage';
+import { EntryModePage } from './pages/EntryModePage';
+import { MarketingStrategyPage } from './pages/MarketingStrategyPage';
 import { StrategyPage } from './pages/StrategyPage';
 import { SustainabilityIndicatorsPage } from './pages/SustainabilityIndicatorsPage';
 import { ViabilityPage } from './pages/ViabilityPage';
@@ -56,6 +58,16 @@ const navItems = [
     to: '/estrategia',
     label: 'Estrategia',
     hint: 'Ruta de ejecución, sostenibilidad y cierre estratégico.'
+  },
+  {
+    to: '/modo-entrada',
+    label: 'Modo de Entrada',
+    hint: 'Estrategia internacional elegida y justificación operativa.'
+  },
+  {
+    to: '/estrategia-marketing',
+    label: 'Estrategia de Marketing',
+    hint: 'Segmentación, canales, precio y plan comercial para Iowa.'
   },
   {
     to: '/documentos',
@@ -123,6 +135,8 @@ function App() {
                 <Route path="/entorno-economico" element={<EconomicPage />} />
                 <Route path="/entornos-comparativos" element={<ComparativeEnvironmentsPage />} />
                 <Route path="/estrategia" element={<StrategyPage />} />
+                <Route path="/modo-entrada" element={<EntryModePage />} />
+                <Route path="/estrategia-marketing" element={<MarketingStrategyPage />} />
                 <Route path="/documentos" element={<DocumentsPage />} />
                 <Route path="/referencias" element={<ReferencesPage />} />
 

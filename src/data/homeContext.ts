@@ -62,6 +62,16 @@ export const homeModules = [
     route: '/estrategia'
   },
   {
+    title: 'Modo de entrada',
+    description: 'Estrategia internacional, canal digital y lógica operativa.',
+    route: '/modo-entrada'
+  },
+  {
+    title: 'Marketing Iowa',
+    description: 'Posicionamiento, audiencias, canales y precio de penetración.',
+    route: '/estrategia-marketing'
+  },
+  {
     title: 'Documentos y avances',
     description: 'Biblioteca, recursos y actualizaciones del proyecto.',
     route: '/documentos'
