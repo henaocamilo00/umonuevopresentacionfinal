@@ -1,0 +1,12 @@
+export const strategicMatrix = {
+  title: 'Matriz estratégica del proyecto',
+  subtitle:
+    'Matriz de trabajo colaborativa para seguimiento de decisiones, validaciones y priorización de acciones de internacionalización.',
+  url: 'https://docs.google.com/spreadsheets/d/1kgUy815uHjtU5nup6VG-WS_gvDORUVTJ/edit?usp=sharing&ouid=101232890607060280311&rtpof=true&sd=true',
+  highlights: [
+    'Control central de avances del proyecto.',
+    'Validación cruzada de hipótesis entre equipo académico y empresarial.',
+    'Priorización de tareas críticas por fase.',
+    'Trazabilidad de decisiones para ejecución en Iowa.'
+  ]
+};

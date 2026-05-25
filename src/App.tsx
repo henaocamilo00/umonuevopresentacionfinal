@@ -12,6 +12,7 @@ import { EconomicPage } from './pages/EconomicPage';
 import { HomePage } from './pages/HomePage';
 import { MarketStatesPage } from './pages/MarketStatesPage';
 import { ReferencesPage } from './pages/ReferencesPage';
+import { StrategicMatrixPage } from './pages/StrategicMatrixPage';
 import { EntryModePage } from './pages/EntryModePage';
 import { MarketingStrategyPage } from './pages/MarketingStrategyPage';
 import { StrategyPage } from './pages/StrategyPage';
@@ -53,6 +54,11 @@ const navItems = [
     to: '/entornos-comparativos',
     label: 'Entornos 2-6',
     hint: 'Comparativos social, tecnológico, legal, comercio e inversión.'
+  },
+  {
+    to: '/matriz',
+    label: 'Matriz',
+    hint: 'Hoja colaborativa para seguimiento estratégico y decisiones.'
   },
   {
     to: '/estrategia',
@@ -134,6 +140,7 @@ function App() {
                 <Route path="/sostenibilidad" element={<SustainabilityIndicatorsPage />} />
                 <Route path="/entorno-economico" element={<EconomicPage />} />
                 <Route path="/entornos-comparativos" element={<ComparativeEnvironmentsPage />} />
+                <Route path="/matriz" element={<StrategicMatrixPage />} />
                 <Route path="/estrategia" element={<StrategyPage />} />
                 <Route path="/modo-entrada" element={<EntryModePage />} />
                 <Route path="/estrategia-marketing" element={<MarketingStrategyPage />} />

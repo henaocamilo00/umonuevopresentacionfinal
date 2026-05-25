@@ -57,6 +57,11 @@ export const homeModules = [
     route: '/entorno-economico'
   },
   {
+    title: 'Matriz estratégica',
+    description: 'Enlace colaborativo para control de acciones y decisiones.',
+    route: '/matriz'
+  },
+  {
     title: 'Ejecución',
     description: 'Ruta estratégica, sostenibilidad e hitos de implementación.',
     route: '/estrategia'
