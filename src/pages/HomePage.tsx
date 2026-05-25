@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Building2, Compass, Factory, Globe } from 'lucide-react';
+import { ArrowRight, Building2, Compass, ExternalLink, Factory, Globe, PlayCircle } from 'lucide-react';
 import { HeroDashboard } from '../components/sections/HeroDashboard';
 import { SectionHeader } from '../components/ui/SectionHeader';
 import { InfoCard } from '../components/cards/InfoCard';
 import { companyTimeline } from '../data/company';
 import { homeContext, homeModules, homePillars } from '../data/homeContext';
 import { projectOverview, quickActions } from '../data/project';
+import { strategicMatrix } from '../data/strategicMatrix';
 
 const iconMap = [Factory, Globe, Compass, Building2];
 
@@ -23,6 +24,30 @@ export function HomePage() {
         market={projectOverview.targetMarket}
         actions={quickActions}
       />
+
+      <section>
+        <article className="rounded-2xl border border-techBlue/35 bg-techBlue/10 p-5 shadow-glow">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-blue-100">Video del proyecto</p>
+              <h2 className="mt-2 text-xl font-semibold text-fogWhite">{strategicMatrix.video.title}</h2>
+              <p className="mt-1 text-sm text-zinc-200">
+                Recurso audiovisual ubicado en Inicio para acceso rápido del equipo y presentación del proyecto.
+              </p>
+            </div>
+            <a
+              href={strategicMatrix.video.url}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl border border-blue-300/40 bg-blue-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-blue-100 transition hover:bg-blue-300/20"
+            >
+              <PlayCircle size={14} />
+              Ver video
+              <ExternalLink size={12} />
+            </a>
+          </div>
+        </article>
+      </section>
 
       <section>
         <SectionHeader

@@ -1,14 +1,14 @@
-import { ExternalLink, Grid2x2Check, ListChecks, PlayCircle, Sparkles } from 'lucide-react';
+import { ExternalLink, Grid2x2Check, ListChecks, Sparkles } from 'lucide-react';
 import { SectionHeader } from '../components/ui/SectionHeader';
 import { strategicMatrix } from '../data/strategicMatrix';
 
-const icons = [Grid2x2Check, ListChecks, Sparkles, PlayCircle, Grid2x2Check];
+const icons = [Grid2x2Check, ListChecks, Sparkles, Grid2x2Check];
 
 export function StrategicMatrixPage() {
   return (
     <div className="space-y-8">
       <section>
-        <SectionHeader eyebrow="Matriz y Video" title={strategicMatrix.title} description={strategicMatrix.subtitle} />
+        <SectionHeader eyebrow="Matriz" title={strategicMatrix.title} description={strategicMatrix.subtitle} />
 
         <article className="rounded-2xl glass p-6 shadow-glow">
           <div className="grid gap-4 lg:grid-cols-[1.2fr_1fr]">
@@ -26,41 +26,12 @@ export function StrategicMatrixPage() {
               >
                 Abrir matriz en Google Sheets <ExternalLink size={13} />
               </a>
-
-              <a
-                href={strategicMatrix.video.url}
-                target="_blank"
-                rel="noreferrer"
-                className="ml-2 mt-4 inline-flex items-center gap-2 rounded-xl border border-techBlue/45 bg-techBlue/15 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-blue-100 transition hover:bg-techBlue/25"
-              >
-                Abrir video <ExternalLink size={13} />
-              </a>
             </div>
 
             <div className="rounded-xl border border-white/15 bg-charcoal/40 p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-metallicGray">Enlaces directos</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-metallicGray">Enlace directo</p>
               <p className="mt-2 break-all text-sm text-zinc-200">{strategicMatrix.url}</p>
-              <p className="mt-2 break-all text-sm text-zinc-200">{strategicMatrix.video.url}</p>
             </div>
-          </div>
-        </article>
-      </section>
-
-      <section>
-        <article className="overflow-hidden rounded-2xl border border-white/15 bg-charcoal/40 shadow-glow">
-          <div className="border-b border-white/10 px-5 py-4">
-            <p className="text-xs uppercase tracking-[0.2em] text-metallicGray">Video</p>
-            <h3 className="mt-1 text-lg font-semibold text-fogWhite">{strategicMatrix.video.title}</h3>
-          </div>
-          <div className="aspect-video w-full">
-            <iframe
-              src={strategicMatrix.video.embedUrl}
-              title={strategicMatrix.video.title}
-              className="h-full w-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
           </div>
         </article>
       </section>

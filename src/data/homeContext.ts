@@ -58,7 +58,7 @@ export const homeModules = [
   },
   {
     title: 'Matriz estratégica',
-    description: 'Matriz colaborativa + video de apoyo para decisiones del proyecto.',
+    description: 'Matriz colaborativa para control de acciones y decisiones.',
     route: '/matriz'
   },
   {
