@@ -57,8 +57,8 @@ const navItems = [
   },
   {
     to: '/matriz',
-    label: 'Matriz',
-    hint: 'Hoja colaborativa para seguimiento estratégico y decisiones.'
+    label: 'Matriz y Video',
+    hint: 'Hoja colaborativa + video de apoyo para seguimiento estratégico.'
   },
   {
     to: '/estrategia',
